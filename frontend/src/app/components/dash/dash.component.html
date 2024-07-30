@@ -1,0 +1,8 @@
+<!-- src/app/components/dash/dash.component.html -->
+<h1>Dashboard</h1>
+<p>Esta página es visible solo para usuarios registrados.</p>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of tasks">
+    {{task._id}} - {{task.name}} : {{task.description}}
+  </li>
+</ul>

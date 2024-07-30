@@ -1,0 +1,25 @@
+<div *ngIf="isAdminOrOperator()">
+  <h2>Agregar Noticia</h2>
+  <form (ngSubmit)="addNoticia()">
+    <label for="titulo">Título:</label>
+    <input id="titulo" [(ngModel)]="noticia.titulo" name="titulo" required>
+    
+    <label for="cuerpo">Cuerpo:</label>
+    <textarea id="cuerpo" [(ngModel)]="noticia.cuerpo" name="cuerpo" required></textarea>
+    
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" [(ngModel)]="noticia.tipo" name="tipo" required>
+      <option value="noticia">Noticia</option>
+      <option value="normativa">Normativa</option>
+    </select>
+
+    <button type="submit">Agregar</button>
+  </form>
+</div>
+
+<div *ngIf="!isAdminOrOperator()">
+  <h2>Noticias</h2>
+  <ul>
+    <li *ngFor="let noticia of noticias">{{ noticia.titulo }}: {{ noticia.cuerpo }}</li>
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+/* src/app/components/principal/principal.component.css */
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  header {
+    background-color: #004a99;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+  }
+  

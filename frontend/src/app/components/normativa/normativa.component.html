@@ -1,0 +1,25 @@
+<div *ngIf="isAdminOrOperator()">
+  <h2>Agregar Normativa</h2>
+  <form (ngSubmit)="addNormativa()">
+    <label for="titulo">Título:</label>
+    <input id="titulo" [(ngModel)]="normativa.titulo" name="titulo" required>
+    
+    <label for="cuerpo">Cuerpo:</label>
+    <textarea id="cuerpo" [(ngModel)]="normativa.cuerpo" name="cuerpo" required></textarea>
+    
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" [(ngModel)]="normativa.tipo" name="tipo" required>
+      <option value="noticia">Noticia</option>
+      <option value="normativa">Normativa</option>
+    </select>
+
+    <button type="submit">Agregar</button>
+  </form>
+</div>
+
+<div *ngIf="!isAdminOrOperator()">
+  <h2>Normativas</h2>
+  <ul>
+    <li *ngFor="let normativa of normativas">{{ normativa.titulo }}: {{ normativa.cuerpo }}</li>
+  </ul>
+</div>

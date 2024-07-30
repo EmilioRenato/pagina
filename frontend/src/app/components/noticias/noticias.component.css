@@ -1,0 +1,10 @@
+/* Asegúrate de que el formulario no esté oculto por estilos */
+form {
+    margin: 20px 0;
+  }
+  
+  input, textarea {
+    display: block;
+    margin: 10px 0;
+  }
+  
